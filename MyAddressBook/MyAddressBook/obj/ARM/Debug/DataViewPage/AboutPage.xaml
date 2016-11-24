@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="MyAddressBook.DataViewPage.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyAddressBook.DataViewPage"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#009ACD">
+            <TextBlock Text="版本信息"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="36"
+                   FontFamily="等线"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Button HorizontalAlignment="Center"
+                    Margin="30,30,30,0"
+                    Width="500"
+                    Height="500"
+                    Background="#009ACD">
+                <StackPanel Margin="-35,-130,0,0">
+                    <TextBlock Text="版本信息:0.1"
+                           FontSize="24" Margin="0,0,0,20"/>
+                    <TextBlock Text="团队信息:咸鱼团队"
+                               FontSize="24" Margin="0,0,0,20"/>
+                    <TextBlock Text="功能信息:简洁的通讯录"
+                               FontSize="24" />
+                </StackPanel>
+            </Button>
+        </Grid>
+    </Grid>
+</Page>
+

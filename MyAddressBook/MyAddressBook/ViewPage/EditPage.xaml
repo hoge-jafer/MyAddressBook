@@ -1,0 +1,151 @@
+﻿<Page
+    x:Class="MyAddressBook.ViewPage.EditPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyAddressBook.ViewPage"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#009ACD"
+              Margin="10,0,10,0">
+            <TextBlock Text="管理"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="36"
+                   FontFamily="等线"/>
+        </Grid>
+        <StackPanel Grid.Row="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="0,10,0,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Row="0" Grid.Column="0"
+                      Margin="0,0,0,0">
+                    <Button Name="AddContactButton" 
+                            FontFamily="Segoe MDL2 Assets"
+                            Content="&#xE8FA;" 
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Background="#009ACD"
+                            FontSize="60"
+                            Height="320"
+                            Width="275"
+                            Margin="10,5,5,5"
+                            Click="AddContactButton_Click" />
+                    <Border Height="50" 
+                            Margin="10,0,5,5"
+                            VerticalAlignment="Bottom"
+                            Background="#B6000000">
+                        <TextBlock HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center"
+                                   Text="添加"
+                                   Foreground="White"/>
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Button Name="FixContactButton" 
+                           FontFamily="Segoe MDL2 Assets"
+                            Content="&#xE8CF;" 
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Background="#009ACD"
+                            FontSize="60"
+                            Height="320"
+                            Width="275"
+                            Margin="5,5,10,5"
+                            Click="FixContactButton_Click"/>
+                    <Border Height="50" 
+                            Margin="5,0,10,5"
+                            VerticalAlignment="Bottom"
+                            Background="#B6000000">
+                        <TextBlock HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center"
+                                   Text="修改"
+                                   Foreground="White"/>
+                    </Border>
+
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <Button Name="BolckContactButton" 
+                            FontFamily="Segoe MDL2 Assets"
+                            Content="&#xE8F8;" 
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Background="#009ACD"
+                            FontSize="60"
+                            Height="320"
+                            Width="275"
+                            Margin="10,5,5,0"
+                            Click="BolckContactButton_Click"/>
+                    <Border Height="50" 
+                            Margin="10,0,5,0"
+                            VerticalAlignment="Bottom"
+                            Background="#B6000000">
+                        <TextBlock HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center"
+                                   Text="拉黑"
+                                   Foreground="White"/>
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Button Name="DelContactButton" 
+                            FontFamily="Segoe MDL2 Assets"
+                            Content="&#xE107;" 
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Background="#009ACD"
+                            FontSize="60"
+                            Height="320"
+                            Width="275"
+                            Margin="5,5,10,0"
+                            Click="DelContactButton_Click"/>
+                    <Border Height="50" 
+                            Margin="5,0,10,0"
+                            VerticalAlignment="Bottom"
+                            Background="#B6000000">
+                        <TextBlock HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center"
+                                   Text="删除"
+                                   Foreground="White"/>
+                    </Border>
+                </Grid>
+            </Grid>
+        </StackPanel>
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Name="HomeAppBarButton" 
+                          Label="主页"
+                          Icon="Home"
+                          Click="HomeAppBarButton_Click"/>
+            <AppBarButton Name="EditAppBarButton" 
+                          Label="管理"
+                          Icon="Edit"/>
+            <AppBarButton Name="ZoomAppBarButton" 
+                          Label="搜索"
+                          Icon="Zoom"
+                          Click="ZoomAppBarButton_Click"/>
+            <AppBarButton Name="ReportHackedAppBarButton" 
+                          Label="关于"
+                          Icon="ReportHacked"
+                          Click="ReportHackedAppBarButton_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
